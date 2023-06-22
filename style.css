@@ -1,12 +1,50 @@
-table {
-    border-collapse: collapse;
-  }
-  th, td {
-    border: 1px solid black;
-    padding: 5px;
+  body {
+    margin-left: 0;
+    margin-right: auto;
+    width: 100%;
+    padding: 50px;
+    /* Ajuste o valor conforme necessário */
   }
 
-  .btnn{
+  #verif_protocolos {
+    margin-left: 0;
+    margin-right: auto;    
+  }
+
+  .atalhos{
+    margin: 0 auto;
+    padding: auto;
+    width: 200%;
+  }
+
+  table,div {
+    border-collapse: collapse;
+    margin: 0 auto;
+    padding: auto;
+    display: table;
+  }
+  
+
+  th,
+  td {
+    border: 1px solid black;
+    padding: 2px;
+  }
+
+  .btnn {
     width: 120px;
 
+  }
+
+  .atalho {
+    width: 320px;
+  }
+
+  .ok {
+    background-color: aquamarine;
+  }
+
+  .erro {
+    background-color: brown;
+    color: aliceblue;
   }

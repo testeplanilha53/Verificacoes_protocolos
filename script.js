@@ -30,26 +30,21 @@ document.getElementById('transferButton').addEventListener('click', function () 
 
 
 
-function dentro_dos_padroes(button) {    
+function dentro_dos_padroes(button) {
     var row = button.parentNode.parentNode;
     var cells = row.getElementsByClassName('cell');
+    
+    //Alterando o background
+     for (var j = 0; j < Math.min(cells.length, 6); j++) {
+        cells[j].classList.add("ok");   
+        cells[j].classList.remove("erro");     
+    }
+
     var texto = ' → Verificação realizada, protocolo dentro dos padrões NCC. ';
     var data = getFormattedDate();
     texto = data + texto + cells[5].value + ' às ' + cells[1].value + '.'
     navigator.clipboard.writeText(texto)
-    console.log(texto)
-    /*
-    for (var i = 0; i < cells.length; i++) {
-        concatenated += cells[i].value;
-        if (i < cells.length - 1) {
-            concatenated += ' ';
-        }
-    }
-    */
-   //row.dataset.concatenated = concatenated;
-    
 
-    
 }
 
 function fora_dos_padroes(button) {
@@ -60,6 +55,12 @@ function fora_dos_padroes(button) {
     texto = data + texto + cells[5].value + ' às ' + cells[1].value + '.'
     navigator.clipboard.writeText(texto)
     console.log(texto)
+
+    //Alterando o background
+    for (var j = 0; j < Math.min(cells.length, 6); j++) {
+        cells[j].classList.add("erro");        
+        cells[j].classList.remove("ok");
+    }
 }
 
 
@@ -68,6 +69,8 @@ document.getElementById('cleanButton').addEventListener('click', function () {
     console.log(cells)
     cells.forEach(element => {
         element.value = ""
+        element.classList.remove("ok");
+        element.classList.remove("erro");
         //console.log(element)
     });
 });
@@ -79,17 +82,25 @@ function getFormattedDate() {
     var day = currentDate.getDate();
     var month = currentDate.getMonth() + 1; // Os meses em JavaScript são baseados em zero, então adicionamos 1
     var year = currentDate.getFullYear();
-  
+
     // Formatação dos zeros à esquerda, se necessário
     if (day < 10) {
-      day = '0' + day;
+        day = '0' + day;
     }
     if (month < 10) {
-      month = '0' + month;
+        month = '0' + month;
     }
-  
+
     //var formattedDate = day + '/' + month + '/' + year;
     var formattedDate = day + '/' + month;
     return formattedDate;
-  }
-  
+}
+
+
+function copiar_atalho(button) {
+    var row = button.parentNode;
+    var cells = row.getElementsByClassName('atalho');
+    var texto = cells[0].value
+    navigator.clipboard.writeText(texto)
+    console.log(cells)
+}
