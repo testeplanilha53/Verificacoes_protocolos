@@ -190,8 +190,11 @@ fetch('arq.JSON').then(response => response.json()) // ou response.text() se o a
         var protocolo = retornarMaiorValor(cells[3].value, cells[4].value)
         console.log(protocolo)
     
-        //var nome_verificador = document.getElementById("Verificador").value
-        var nome_verificador=""
+        var nome_verificador = document.getElementById("Verificador").value
+            var index_verif = usuarios.indexOf(nome_verificador)
+            nome_verificador = nomes_form[index_verif]
+            
+        //var nome_verificador=""
         var msg_erro =""
         
         var link=`https://docs.google.com/forms/d/e/1FAIpQLSe3dQNujFwgZG-rdxdrqoF8i8NHb3BYH8yLZXgW7KF93gp_iA/viewform?usp=pp_url&entry.1594760899=${msg_erro}&entry.479460712=${protocolo}&entry.1168750468=${codigo}&entry.150123755=${data_pro}&entry.670394469=${nome_verificador}&entry.1721606117=${nome_op}`
