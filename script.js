@@ -167,7 +167,7 @@ fetch('arq.JSON').then(response => response.json()) // ou response.text() se o a
 function link_formulario(button) {
     var row = button.parentNode;
     var cells = row.getElementsByClassName('cell');
-    
+    console.log(cells)
     //var protocolo = retornarMaiorValor(cells[4].value, cells[5].value)
     //console.log(protocolo)
 
