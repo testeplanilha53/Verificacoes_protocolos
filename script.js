@@ -136,15 +136,21 @@ function link_protocolo(protocolo) {
 
 
 
+var dados
+var nomes
+var nomes_form
+var protocolos
+var protocolos_form
+
 
 fetch('arq.JSON').then(response => response.json()) // ou response.text() se o arquivo não for um JSON válido
     .then(data => {
-        var dados = data;
-        var nomes = dados['nomes'];
-        var nomes_form = dados['nomes_form'];
-        var protocolos = dados['protocolos'];
-        var protocolos_form = dados['protocolos_form'];
-        //console.log(data);
+        dados = data;
+        nomes = dados['nomes'];
+        nomes_form = dados['nomes_form'];
+        protocolos = dados['protocolos'];
+        protocolos_form = dados['protocolos_form'];
+        console.log(nomes);
     })
     .catch(error => {
         // Trate quaisquer erros que possam ocorrer durante o processo
