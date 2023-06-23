@@ -33,11 +33,11 @@ document.getElementById('transferButton').addEventListener('click', function () 
 function dentro_dos_padroes(button) {
     var row = button.parentNode.parentNode;
     var cells = row.getElementsByClassName('cell');
-    
+
     //Alterando o background
-     for (var j = 0; j < Math.min(cells.length, 6); j++) {
-        cells[j].classList.add("ok");   
-        cells[j].classList.remove("erro");     
+    for (var j = 0; j < Math.min(cells.length, 6); j++) {
+        cells[j].classList.add("ok");
+        cells[j].classList.remove("erro");
     }
 
     var texto = ' → Verificação realizada, protocolo dentro dos padrões NCC. ';
@@ -59,7 +59,7 @@ function fora_dos_padroes(button) {
 
     //Alterando o background
     for (var j = 0; j < Math.min(cells.length, 6); j++) {
-        cells[j].classList.add("erro");        
+        cells[j].classList.add("erro");
         cells[j].classList.remove("ok");
     }
     alert_copiado()
@@ -77,8 +77,8 @@ document.getElementById('cleanButton').addEventListener('click', function () {
     });
     let notificacao = document.getElementById("notificacao")
     notificacao.innerHTML = '<div class="alert alert-danger" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>Dados apagados!</strong> </div>'
-    window.setTimeout(function () {       
-        notificacao.innerHTML = ""        
+    window.setTimeout(function () {
+        notificacao.innerHTML = ""
     }, 3000);
 });
 
@@ -114,23 +114,36 @@ function copiar_atalho(button) {
 }
 
 
-function alert_copiado(){
+function alert_copiado() {
     let notificacao = document.getElementById("notificacao")
     notificacao.innerHTML = '<div class="alert alert-primary" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>Informação copiada com sucesso!</strong> </div>'
-    window.setTimeout(function () {       
-        notificacao.innerHTML = ""        
+    window.setTimeout(function () {
+        notificacao.innerHTML = ""
     }, 3000);
 }
 
 
-function link_protocolo(protocolo) {    
+function link_protocolo(protocolo) {
     var largura = 1400; // Largura da nova janela em pixels
     var altura = 400; // Altura da nova janela em pixels
     var url = `http://adm.fasternet.com.br/tarefas_mostra.php?tarefa=${protocolo.value}`
-  
+
     var left = (screen.width - largura) / 2;
     var top = (screen.height - altura) / 2;
-  
+
     window.open(url, '_blank', 'width=' + largura + ',height=' + altura + ',left=' + left + ',top=' + top);
-  }
-  
+}
+
+
+
+
+fetch('arq.JSON').then(response => response.json()) // ou response.text() se o arquivo não for um JSON válido
+    .then(data => {
+        // var dados = data;
+        //dados = dados[0];
+        console.log(data);
+    })
+    .catch(error => {
+        // Trate quaisquer erros que possam ocorrer durante o processo
+        console.error('Ocorreu um erro:', error);
+    });
