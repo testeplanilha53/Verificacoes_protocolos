@@ -49,6 +49,10 @@
     color: aliceblue;
   }
 
+  .Verificador{
+    width: 100%;
+  }
+
   .alert{
     border-radius: 100px;
     font-size: larger;
