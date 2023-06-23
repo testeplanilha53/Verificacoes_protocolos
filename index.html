@@ -5,17 +5,18 @@
   <meta charset="UTF-8">
   <title>Transferir informações do Excel</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
+  <!--BOOTSTRAP-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 </head>
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 <body>
   <div class="verif_protocolos">
@@ -23,6 +24,7 @@
 
     <button id="transferButton">Transferir</button>
     <button id="cleanButton">Apagar Todos</button> <br> <br>
+    <span id="notificacao"></span>
 
     <table id="excelTable">
       <thead>
@@ -40,120 +42,138 @@
           <td><input type="text" class="cell" id="cell00"></td>
           <td><input type="text" class="cell" id="cell01"></td>
           <td><input type="text" class="cell" id="cell02"></td>
-          <td><input type="text" class="cell" id="cell03"></td>
-          <td><input type="text" class="cell" id="cell04"></td>
+          <td><input type="text" class="cell" id="cell03" ondblclick="link_protocolo(this)"></td>
+          <td><input type="text" class="cell" id="cell04" ondblclick="link_protocolo(this)"></td>
           <td><input type="text" class="cell" id="cell05"></td>
-          <td><button class="btnn" name="dentro_dos_padroes" onclick="dentro_dos_padroes(this)">Dentro dos
-              padrões</button></td>
-          <td><button class="btnn" name="fora_dos_padroes" onclick="fora_dos_padroes(this)">Fora dos padrões</button>
+          <td><button class="btnn btn btn-warning" name="dentro_dos_padroes" onclick="dentro_dos_padroes(this)">Dentro
+              dos padrões</button></td>
+          <td><button class="btnn btn btn-warning" name="fora_dos_padroes" onclick="fora_dos_padroes(this)">Fora dos
+              padrões</button>
           </td>
         </tr>
         <tr>
           <td><input type="text" class="cell" id="cell10"></td>
           <td><input type="text" class="cell" id="cell11"></td>
           <td><input type="text" class="cell" id="cell12"></td>
-          <td><input type="text" class="cell" id="cell13"></td>
-          <td><input type="text" class="cell" id="cell14"></td>
+          <td><input type="text" class="cell" id="cell13" ondblclick="link_protocolo(this)"></td>
+          <td><input type="text" class="cell" id="cell14" ondblclick="link_protocolo(this)"></td>
           <td><input type="text" class="cell" id="cell15"></td>
-          <td><button class="btnn" name="dentro_dos_padroes" onclick="dentro_dos_padroes(this)">Dentro dos
-              padrões</button></td>
-          <td><button class="btnn" name="fora_dos_padroes" onclick="fora_dos_padroes(this)">Fora dos padrões</button>
+          <td><button class="btnn btn btn-warning" name="dentro_dos_padroes" onclick="dentro_dos_padroes(this)">Dentro
+              dos padrões</button></td>
+          <td><button class="btnn btn btn-warning" name="fora_dos_padroes" onclick="fora_dos_padroes(this)">Fora dos
+              padrões</button>
           </td>
         </tr>
         <tr>
           <td><input type="text" class="cell" id="cell20"></td>
           <td><input type="text" class="cell" id="cell21"></td>
           <td><input type="text" class="cell" id="cell22"></td>
-          <td><input type="text" class="cell" id="cell23"></td>
-          <td><input type="text" class="cell" id="cell24"></td>
+          <td><input type="text" class="cell" id="cell23" ondblclick="link_protocolo(this)"></td>
+          <td><input type="text" class="cell" id="cell24" ondblclick="link_protocolo(this)"></td>
           <td><input type="text" class="cell" id="cell25"></td>
-          <td><button class="btnn" name="dentro_dos_padroes" onclick="dentro_dos_padroes(this)">Dentro dos
+          <td><button class="btnn btn btn-warning" name="dentro_dos_padroes" onclick="dentro_dos_padroes(this)">Dentro
+              dos
               padrões</button></td>
-          <td><button class="btnn" name="fora_dos_padroes" onclick="fora_dos_padroes(this)">Fora dos padrões</button>
+          <td><button class="btnn btn btn-warning" name="fora_dos_padroes" onclick="fora_dos_padroes(this)">Fora dos
+              padrões</button>
           </td>
         </tr>
         <tr>
           <td><input type="text" class="cell" id="cell30"></td>
           <td><input type="text" class="cell" id="cell31"></td>
           <td><input type="text" class="cell" id="cell32"></td>
-          <td><input type="text" class="cell" id="cell33"></td>
-          <td><input type="text" class="cell" id="cell34"></td>
+          <td><input type="text" class="cell" id="cell33" ondblclick="link_protocolo(this)"></td>
+          <td><input type="text" class="cell" id="cell34" ondblclick="link_protocolo(this)"></td>
           <td><input type="text" class="cell" id="cell35"></td>
-          <td><button class="btnn" name="dentro_dos_padroes" onclick="dentro_dos_padroes(this)">Dentro dos
+          <td><button class="btnn btn btn-warning" name="dentro_dos_padroes" onclick="dentro_dos_padroes(this)">Dentro
+              dos
               padrões</button></td>
-          <td><button class="btnn" name="fora_dos_padroes" onclick="fora_dos_padroes(this)">Fora dos padrões</button>
+          <td><button class="btnn btn btn-warning" name="fora_dos_padroes" onclick="fora_dos_padroes(this)">Fora dos
+              padrões</button>
           </td>
         </tr>
         <tr>
           <td><input type="text" class="cell" id="cell40"></td>
           <td><input type="text" class="cell" id="cell41"></td>
           <td><input type="text" class="cell" id="cell42"></td>
-          <td><input type="text" class="cell" id="cell43"></td>
-          <td><input type="text" class="cell" id="cell44"></td>
+          <td><input type="text" class="cell" id="cell43" ondblclick="link_protocolo(this)"></td>
+          <td><input type="text" class="cell" id="cell44" ondblclick="link_protocolo(this)"></td>
           <td><input type="text" class="cell" id="cell45"></td>
-          <td><button class="btnn" name="dentro_dos_padroes" onclick="dentro_dos_padroes(this)">Dentro dos
+          <td><button class="btnn btn btn-warning" name="dentro_dos_padroes" onclick="dentro_dos_padroes(this)">Dentro
+              dos
               padrões</button></td>
-          <td><button class="btnn" name="fora_dos_padroes" onclick="fora_dos_padroes(this)">Fora dos padrões</button>
+          <td><button class="btnn btn btn-warning" name="fora_dos_padroes" onclick="fora_dos_padroes(this)">Fora dos
+              padrões</button>
           </td>
         </tr>
         <tr>
           <td><input type="text" class="cell" id="cell50"></td>
           <td><input type="text" class="cell" id="cell51"></td>
           <td><input type="text" class="cell" id="cell52"></td>
-          <td><input type="text" class="cell" id="cell53"></td>
-          <td><input type="text" class="cell" id="cell54"></td>
+          <td><input type="text" class="cell" id="cell53" ondblclick="link_protocolo(this)"></td>
+          <td><input type="text" class="cell" id="cell54" ondblclick="link_protocolo(this)"></td>
           <td><input type="text" class="cell" id="cell55"></td>
-          <td><button class="btnn" name="dentro_dos_padroes" onclick="dentro_dos_padroes(this)">Dentro dos
+          <td><button class="btnn btn btn-warning" name="dentro_dos_padroes" onclick="dentro_dos_padroes(this)">Dentro
+              dos
               padrões</button></td>
-          <td><button class="btnn" name="fora_dos_padroes" onclick="fora_dos_padroes(this)">Fora dos padrões</button>
+          <td><button class="btnn btn btn-warning" name="fora_dos_padroes" onclick="fora_dos_padroes(this)">Fora dos
+              padrões</button>
           </td>
         </tr>
         <tr>
           <td><input type="text" class="cell" id="cell60"></td>
           <td><input type="text" class="cell" id="cell61"></td>
           <td><input type="text" class="cell" id="cell62"></td>
-          <td><input type="text" class="cell" id="cell63"></td>
-          <td><input type="text" class="cell" id="cell64"></td>
+          <td><input type="text" class="cell" id="cell63" ondblclick="link_protocolo(this)"></td>
+          <td><input type="text" class="cell" id="cell64" ondblclick="link_protocolo(this)"></td>
           <td><input type="text" class="cell" id="cell65"></td>
-          <td><button class="btnn" name="dentro_dos_padroes" onclick="dentro_dos_padroes(this)">Dentro dos
+          <td><button class="btnn btn btn-warning" name="dentro_dos_padroes" onclick="dentro_dos_padroes(this)">Dentro
+              dos
               padrões</button></td>
-          <td><button class="btnn" name="fora_dos_padroes" onclick="fora_dos_padroes(this)">Fora dos padrões</button>
+          <td><button class="btnn btn btn-warning" name="fora_dos_padroes" onclick="fora_dos_padroes(this)">Fora dos
+              padrões</button>
           </td>
         </tr>
         <tr>
           <td><input type="text" class="cell" id="cell70"></td>
           <td><input type="text" class="cell" id="cell71"></td>
           <td><input type="text" class="cell" id="cell72"></td>
-          <td><input type="text" class="cell" id="cell73"></td>
-          <td><input type="text" class="cell" id="cell74"></td>
+          <td><input type="text" class="cell" id="cell73" ondblclick="link_protocolo(this)"></td>
+          <td><input type="text" class="cell" id="cell74" ondblclick="link_protocolo(this)"></td>
           <td><input type="text" class="cell" id="cell75"></td>
-          <td><button class="btnn" name="dentro_dos_padroes" onclick="dentro_dos_padroes(this)">Dentro dos
+          <td><button class="btnn btn btn-warning" name="dentro_dos_padroes" onclick="dentro_dos_padroes(this)">Dentro
+              dos
               padrões</button></td>
-          <td><button class="btnn" name="fora_dos_padroes" onclick="fora_dos_padroes(this)">Fora dos padrões</button>
+          <td><button class="btnn btn btn-warning" name="fora_dos_padroes" onclick="fora_dos_padroes(this)">Fora dos
+              padrões</button>
           </td>
         </tr>
         <tr>
           <td><input type="text" class="cell" id="cell80"></td>
           <td><input type="text" class="cell" id="cell81"></td>
           <td><input type="text" class="cell" id="cell82"></td>
-          <td><input type="text" class="cell" id="cell83"></td>
-          <td><input type="text" class="cell" id="cell84"></td>
+          <td><input type="text" class="cell" id="cell83" ondblclick="link_protocolo(this)"></td>
+          <td><input type="text" class="cell" id="cell84" ondblclick="link_protocolo(this)"></td>
           <td><input type="text" class="cell" id="cell85"></td>
-          <td><button class="btnn" name="dentro_dos_padroes" onclick="dentro_dos_padroes(this)">Dentro dos
+          <td><button class="btnn btn btn-warning" name="dentro_dos_padroes" onclick="dentro_dos_padroes(this)">Dentro
+              dos
               padrões</button></td>
-          <td><button class="btnn" name="fora_dos_padroes" onclick="fora_dos_padroes(this)">Fora dos padrões</button>
+          <td><button class="btnn btn btn-warning" name="fora_dos_padroes" onclick="fora_dos_padroes(this)">Fora dos
+              padrões</button>
           </td>
         </tr>
         <tr>
           <td><input type="text" class="cell" id="cell90"></td>
           <td><input type="text" class="cell" id="cell91"></td>
           <td><input type="text" class="cell" id="cell92"></td>
-          <td><input type="text" class="cell" id="cell93"></td>
-          <td><input type="text" class="cell" id="cell94"></td>
+          <td><input type="text" class="cell" id="cell93" ondblclick="link_protocolo(this)"></td>
+          <td><input type="text" class="cell" id="cell94" ondblclick="link_protocolo(this)"></td>
           <td><input type="text" class="cell" id="cell95"></td>
-          <td><button class="btnn" name="dentro_dos_padroes" onclick="dentro_dos_padroes(this)">Dentro dos
+          <td><button class="btnn btn btn-warning" name="dentro_dos_padroes" onclick="dentro_dos_padroes(this)">Dentro
+              dos
               padrões</button></td>
-          <td><button class="btnn" name="fora_dos_padroes" onclick="fora_dos_padroes(this)">Fora dos padrões</button>
+          <td><button class="btnn btn btn-warning" name="fora_dos_padroes" onclick="fora_dos_padroes(this)">Fora dos
+              padrões</button>
           </td>
         </tr>
 
@@ -166,28 +186,30 @@
     <div id="atalhos">
       <div>
         <input class="atalho" type="text" value="Dentro dos padrões NCC.">
-        <button onclick="copiar_atalho(this)">Copiar</button>
+        <button class="" onclick="copiar_atalho(this)">Copiar</button>
       </div>
       <div>
         <input class="atalho" type="text" value="Falta o status dos leds">
-        <button onclick="copiar_atalho(this)">Copiar</button>
+        <button class="" onclick="copiar_atalho(this)">Copiar</button>
       </div>
       <div>
         <input class="atalho" type="text" value="Código incorreto, seria o ">
-        <button onclick="copiar_atalho(this)">Copiar</button>
+        <button class="" onclick="copiar_atalho(this)">Copiar</button>
       </div>
       <div>
         <input class="atalho" type="text" value="Não atualizou a BFP no ADM.">
-        <button onclick="copiar_atalho(this)">Copiar</button>
+        <button class="" onclick="copiar_atalho(this)">Copiar</button>
       </div>
       <div>
         <input class="atalho" type="text" value="Não registrou o ponto de referência e o horário de preferência.">
-        <button onclick="copiar_atalho(this)">Copiar</button>
+        <button class="" onclick="copiar_atalho(this)">Copiar</button>
       </div>
     </div>
   </div>
 
 </body>
+
 <script src="script.js"></script>
+
 
 </html>

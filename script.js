@@ -44,6 +44,7 @@ function dentro_dos_padroes(button) {
     var data = getFormattedDate();
     texto = data + texto + cells[5].value + ' às ' + cells[1].value + '.'
     navigator.clipboard.writeText(texto)
+    alert_copiado()
 
 }
 
@@ -61,6 +62,7 @@ function fora_dos_padroes(button) {
         cells[j].classList.add("erro");        
         cells[j].classList.remove("ok");
     }
+    alert_copiado()
 }
 
 
@@ -73,6 +75,11 @@ document.getElementById('cleanButton').addEventListener('click', function () {
         element.classList.remove("erro");
         //console.log(element)
     });
+    let notificacao = document.getElementById("notificacao")
+    notificacao.innerHTML = '<div class="alert alert-danger" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>Dados apagados!</strong> </div>'
+    window.setTimeout(function () {       
+        notificacao.innerHTML = ""        
+    }, 3000);
 });
 
 
@@ -103,4 +110,27 @@ function copiar_atalho(button) {
     var texto = cells[0].value
     navigator.clipboard.writeText(texto)
     console.log(cells)
+    alert_copiado()
 }
+
+
+function alert_copiado(){
+    let notificacao = document.getElementById("notificacao")
+    notificacao.innerHTML = '<div class="alert alert-primary" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>Informação copiada com sucesso!</strong> </div>'
+    window.setTimeout(function () {       
+        notificacao.innerHTML = ""        
+    }, 3000);
+}
+
+
+function link_protocolo(protocolo) {    
+    var largura = 1400; // Largura da nova janela em pixels
+    var altura = 400; // Altura da nova janela em pixels
+    var url = `http://adm.fasternet.com.br/tarefas_mostra.php?tarefa=${protocolo.value}`
+  
+    var left = (screen.width - largura) / 2;
+    var top = (screen.height - altura) / 2;
+  
+    window.open(url, '_blank', 'width=' + largura + ',height=' + altura + ',left=' + left + ',top=' + top);
+  }
+  
