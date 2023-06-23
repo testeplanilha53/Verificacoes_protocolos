@@ -145,7 +145,7 @@ var protocolos_form
 
 fetch('arq.JSON').then(response => response.json()) // ou response.text() se o arquivo não for um JSON válido
     .then(data => {
-        dados = data;
+        dados = data[0];
         nomes = dados['nomes'];
         nomes_form = dados['nomes_form'];
         protocolos = dados['protocolos'];
