@@ -136,6 +136,9 @@ function link_protocolo(protocolo) {
 
 
 
+
+// PEGANDO OS DADOS DO JSON
+
 var dados
 var nomes
 var nomes_form
@@ -156,3 +159,52 @@ fetch('arq.JSON').then(response => response.json()) // ou response.text() se o a
         // Trate quaisquer erros que possam ocorrer durante o processo
         console.error('Ocorreu um erro:', error);
     });
+
+
+
+
+
+function link_formulario(button) {
+    var row = button.parentNode;
+    var cells = row.getElementsByClassName('cell');
+    
+    var protocolo = retornarMaiorValor(cells[4].value, cells[5].value)
+    console.log(protocolo)
+
+
+    var data = cells[1].value
+    data = transformarDataFormato(data)
+    console.log(data)
+    
+    var nome_op = cells[6].value
+        var index_nome = nomes.indexOf(nome_op)
+        nome_op = nomes_form[index]
+        console.log(nome_op)
+
+    var codigo = cells[3].value
+        var index_cod = protocolos.indexOf(codigo)
+        codigo = protocolos_form[index]
+        console.log(codigo)    
+
+}
+
+
+
+function retornarMaiorValor(num1, num2) {
+    if (num1 > num2) {
+        return num1;
+    } else {
+        return num2;
+    }
+}
+
+
+function transformarDataFormato(data) {
+    // Divide a string da data em dia, mês e ano
+    var partes = data.split('/');
+    
+    // Inverte a ordem para ano, mês, dia e une novamente com "-"
+    var novaData = partes[2] + '-' + partes[1] + '-' + partes[0];
+    
+    return novaData;
+  }
