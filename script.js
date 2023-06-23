@@ -153,7 +153,7 @@ fetch('arq.JSON').then(response => response.json()) // ou response.text() se o a
         nomes_form = dados['nomes_form'];
         protocolos = dados['protocolos'];
         protocolos_form = dados['protocolos_form'];
-        console.log(nomes);
+        //console.log(nomes);
     })
     .catch(error => {
         // Trate quaisquer erros que possam ocorrer durante o processo
