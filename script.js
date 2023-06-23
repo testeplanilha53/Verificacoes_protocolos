@@ -168,8 +168,8 @@ function link_formulario(button) {
     var row = button.parentNode;
     var cells = row.getElementsByClassName('cell');
     
-    var protocolo = retornarMaiorValor(cells[4].value, cells[5].value)
-    console.log(protocolo)
+    //var protocolo = retornarMaiorValor(cells[4].value, cells[5].value)
+    //console.log(protocolo)
 
     var data = cells[1].value
     data = transformarDataFormato(data)
