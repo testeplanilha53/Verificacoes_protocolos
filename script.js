@@ -13,7 +13,7 @@ document.getElementById('transferButton').addEventListener('click', function () 
             var lines = text.split('\n');
 
             // Preencher os inputs com os dados do Excel
-            for (var i = 0; i < Math.min(lines.length, 10); i++) {
+            for (var i = 0; i < Math.min(lines.length, qtd_linhas); i++) {
                 var cells = lines[i].split('\t');
                 for (var j = 0; j < Math.min(cells.length, 6); j++) {
                     var inputId = 'cell' + i + j;
