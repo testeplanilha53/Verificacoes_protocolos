@@ -195,9 +195,18 @@ fetch('arq.JSON').then(response => response.json()) // ou response.text() se o a
             nome_verificador = nomes_form[index_verif]
             
         //var nome_verificador=""
-        var msg_erro =""
         
-        var link=`https://docs.google.com/forms/d/e/1FAIpQLSe3dQNujFwgZG-rdxdrqoF8i8NHb3BYH8yLZXgW7KF93gp_iA/viewform?usp=pp_url&entry.1594760899=${msg_erro}&entry.479460712=${protocolo}&entry.1168750468=${codigo}&entry.150123755=${data_pro}&entry.670394469=${nome_verificador}&entry.1721606117=${nome_op}`
+          if (cells[0].classList.contains('ok')) {
+            var msg_erro ="Dentro dos padrões"
+            var link=`https://docs.google.com/forms/d/e/1FAIpQLSe3dQNujFwgZG-rdxdrqoF8i8NHb3BYH8yLZXgW7KF93gp_iA/viewform?usp=pp_url&entry.1247819090=Protocolo+dentro+dos+padr%C3%B5es+NCC&entry.1594760899=${msg_erro}&entry.479460712=${protocolo}&entry.1168750468=${codigo}&entry.150123755=${data_pro}&entry.670394469=${nome_verificador}&entry.1721606117=${nome_op}`
+          } else if (cells[0].classList.contains('erro')) {
+            var msg_erro =""
+            var link=`https://docs.google.com/forms/d/e/1FAIpQLSe3dQNujFwgZG-rdxdrqoF8i8NHb3BYH8yLZXgW7KF93gp_iA/viewform?usp=pp_url&entry.1594760899=${msg_erro}&entry.479460712=${protocolo}&entry.1168750468=${codigo}&entry.150123755=${data_pro}&entry.670394469=${nome_verificador}&entry.1721606117=${nome_op}`
+          } else {
+            var msg_erro =""
+            var link=`https://docs.google.com/forms/d/e/1FAIpQLSe3dQNujFwgZG-rdxdrqoF8i8NHb3BYH8yLZXgW7KF93gp_iA/viewform?usp=pp_url&entry.1594760899=${msg_erro}&entry.479460712=${protocolo}&entry.1168750468=${codigo}&entry.150123755=${data_pro}&entry.670394469=${nome_verificador}&entry.1721606117=${nome_op}`
+          }
+                        
     
         var largura = 1400; // Largura da nova janela em pixels
         var altura = 400; // Altura da nova janela em pixels    
@@ -206,6 +215,7 @@ fetch('arq.JSON').then(response => response.json()) // ou response.text() se o a
         var top = (screen.height - altura) / 2;
         window.open(link, '_blank', 'width=' + largura + ',height=' + altura + ',left=' + left + ',top=' + top);
     }
+
 
 
 function retornarMaiorValor(num1, num2) {
