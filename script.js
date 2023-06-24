@@ -236,3 +236,10 @@ function transformarDataFormato(data) {
     
     return novaData;
   }
+
+
+  function addLinhas(){
+    var tabela = document.getElementById("linhas")
+    linhas.innerHTML =+ `<tr> <td><input type="text" class="cell" id="cell00"></td> <td><input type="text" class="cell" id="cell01"></td> <td><input type="text" class="cell" id="cell02"></td> <td><input type="text" class="cell" id="cell03" ondblclick="link_protocolo(this)"></td> <td><input type="text" class="cell" id="cell04" ondblclick="link_protocolo(this)"></td> <td><input type="text" class="cell" id="cell05"></td> <td><button class="btnn btn btn-warning" name="dentro_dos_padroes" onclick="dentro_dos_padroes(this)">Dentro dos padrões</button></td> <td><button class="btnn btn btn-warning" name="fora_dos_padroes" onclick="fora_dos_padroes(this)">Fora dos padrões</button></td> <td><button class="btnn btn btn-info" onclick="link_formulario(this)">Formulario</button></td> </tr>`
+
+  }
