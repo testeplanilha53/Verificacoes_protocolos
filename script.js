@@ -5,6 +5,7 @@ document.getElementById('transferButton').addEventListener('click', function () 
         return;
     }
 
+    var qtd_linhas = contarElementosTR()
     // Obter os dados da área de transferência
     navigator.clipboard.readText()
         .then(function (text) {
@@ -242,4 +243,16 @@ function transformarDataFormato(data) {
     var tabela = document.getElementById("linhas")
     tabela.innerHTML = tabela.innerHTML + `<tr> <td><input type="text" class="cell" id="cell00"></td> <td><input type="text" class="cell" id="cell01"></td> <td><input type="text" class="cell" id="cell02"></td> <td><input type="text" class="cell" id="cell03" ondblclick="link_protocolo(this)"></td> <td><input type="text" class="cell" id="cell04" ondblclick="link_protocolo(this)"></td> <td><input type="text" class="cell" id="cell05"></td> <td><button class="btnn btn btn-warning" name="dentro_dos_padroes" onclick="dentro_dos_padroes(this)">Dentro dos padrões</button></td> <td><button class="btnn btn btn-warning" name="fora_dos_padroes" onclick="fora_dos_padroes(this)">Fora dos padrões</button></td> <td><button class="btnn btn btn-info" onclick="link_formulario(this)">Formulario</button></td> </tr>`
 
+  }
+
+
+  function contarElementosTR() {
+    var div = document.getElementById('linhas');
+    if (div) {
+      var trElements = div.getElementsByTagName('tr');
+      return trElements.length;
+    } else {
+      //console.log('A div com o ID ' + divId + ' não foi encontrada.');
+      return 0;
+    }
   }
