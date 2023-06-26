@@ -241,9 +241,11 @@ function transformarDataFormato(data) {
 
   function addLinhas(){
     var tabela = document.getElementById("linhas")
-    tabela.innerHTML = tabela.innerHTML + `<tr> <td><input type="text" class="cell" id="cell00"></td> <td><input type="text" class="cell" id="cell01"></td> <td><input type="text" class="cell" id="cell02"></td> <td><input type="text" class="cell" id="cell03" ondblclick="link_protocolo(this)"></td> <td><input type="text" class="cell" id="cell04" ondblclick="link_protocolo(this)"></td> <td><input type="text" class="cell" id="cell05"></td> <td><button class="btnn btn btn-warning" name="dentro_dos_padroes" onclick="dentro_dos_padroes(this)">Dentro dos padrões</button></td> <td><button class="btnn btn btn-warning" name="fora_dos_padroes" onclick="fora_dos_padroes(this)">Fora dos padrões</button></td> <td><button class="btnn btn btn-info" onclick="link_formulario(this)">Formulario</button></td> </tr>`
+    var qtd_linhas = contarElementosTR()
+    tabela.innerHTML = tabela.innerHTML + `<tr> <td><input type="text" class="cell" id="cell${qtd_linhas}0"></td> <td><input type="text" class="cell" id="cell${qtd_linhas}1"></td> <td><input type="text" class="cell" id="cell${qtd_linhas}2"></td> <td><input type="text" class="cell" id="cell${qtd_linhas}3" ondblclick="link_protocolo(this)"></td> <td><input type="text" class="cell" id="cell${qtd_linhas}4" ondblclick="link_protocolo(this)"></td> <td><input type="text" class="cell" id="cell${qtd_linhas}5"></td> <td><button class="btnn btn btn-warning" name="dentro_dos_padroes" onclick="dentro_dos_padroes(this)">Dentro dos padrões</button></td> <td><button class="btnn btn btn-warning" name="fora_dos_padroes" onclick="fora_dos_padroes(this)">Fora dos padrões</button></td> <td><button class="btnn btn btn-info" onclick="link_formulario(this)">Formulario</button></td> </tr>`
 
   }
+
 
 
   function contarElementosTR() {
