@@ -166,56 +166,56 @@ fetch('arq.JSON').then(response => response.json()) // ou response.text() se o a
 
 
 
-    function link_formulario(button) {    
-        var row = button.parentNode.parentNode;
-        var cells = row.getElementsByClassName('cell');
-        console.log(cells)
-        //var protocolo = retornarMaiorValor(cells[4].value, cells[5].value)
-        //console.log(protocolo)
-    
-        var data_pro = cells[0].value
-        console.log(data_pro)
-        data_pro = transformarDataFormato(data_pro)
-        console.log(data_pro)
-        
-        var nome_op = cells[5].value
-            var index_nome = nomes.indexOf(nome_op)
-            nome_op = nomes_form[index_nome]
-            console.log(nome_op)
-    
-        var codigo = cells[2].value
-            var index_cod = protocolos.indexOf(codigo)
-            codigo = protocolos_form[index_cod]
-            console.log(codigo)    
-    
-        var protocolo = retornarMaiorValor(cells[3].value, cells[4].value)
-        console.log(protocolo)
-    
-        var nome_verificador = document.getElementById("Verificador").value
-            var index_verif = usuarios.indexOf(nome_verificador)
-            nome_verificador = nomes_form[index_verif]
-            
-        //var nome_verificador=""
-        
-          if (cells[0].classList.contains('ok')) {
-            var msg_erro ="Dentro dos padrões"
-            var link=`https://docs.google.com/forms/d/e/1FAIpQLSe3dQNujFwgZG-rdxdrqoF8i8NHb3BYH8yLZXgW7KF93gp_iA/viewform?usp=pp_url&entry.1247819090=Protocolo+dentro+dos+padr%C3%B5es+NCC&entry.1594760899=${msg_erro}&entry.479460712=${protocolo}&entry.1168750468=${codigo}&entry.150123755=${data_pro}&entry.670394469=${nome_verificador}&entry.1721606117=${nome_op}`
-          } else if (cells[0].classList.contains('erro')) {
-            var msg_erro =""
-            var link=`https://docs.google.com/forms/d/e/1FAIpQLSe3dQNujFwgZG-rdxdrqoF8i8NHb3BYH8yLZXgW7KF93gp_iA/viewform?usp=pp_url&entry.1594760899=${msg_erro}&entry.479460712=${protocolo}&entry.1168750468=${codigo}&entry.150123755=${data_pro}&entry.670394469=${nome_verificador}&entry.1721606117=${nome_op}`
-          } else {
-            var msg_erro =""
-            var link=`https://docs.google.com/forms/d/e/1FAIpQLSe3dQNujFwgZG-rdxdrqoF8i8NHb3BYH8yLZXgW7KF93gp_iA/viewform?usp=pp_url&entry.1594760899=${msg_erro}&entry.479460712=${protocolo}&entry.1168750468=${codigo}&entry.150123755=${data_pro}&entry.670394469=${nome_verificador}&entry.1721606117=${nome_op}`
-          }
-                        
-    
-        var largura = 1400; // Largura da nova janela em pixels
-        var altura = 400; // Altura da nova janela em pixels    
-    
-        var left = (screen.width - largura) / 2;
-        var top = (screen.height - altura) / 2;
-        window.open(link, '_blank', 'width=' + largura + ',height=' + altura + ',left=' + left + ',top=' + top);
+function link_formulario(button) {
+    var row = button.parentNode.parentNode;
+    var cells = row.getElementsByClassName('cell');
+    console.log(cells)
+    //var protocolo = retornarMaiorValor(cells[4].value, cells[5].value)
+    //console.log(protocolo)
+
+    var data_pro = cells[0].value
+    console.log(data_pro)
+    data_pro = transformarDataFormato(data_pro)
+    console.log(data_pro)
+
+    var nome_op = cells[5].value
+    var index_nome = nomes.indexOf(nome_op)
+    nome_op = nomes_form[index_nome]
+    console.log(nome_op)
+
+    var codigo = cells[2].value
+    var index_cod = protocolos.indexOf(codigo)
+    codigo = protocolos_form[index_cod]
+    console.log(codigo)
+
+    var protocolo = retornarMaiorValor(cells[3].value, cells[4].value)
+    console.log(protocolo)
+
+    var nome_verificador = document.getElementById("Verificador").value
+    var index_verif = usuarios.indexOf(nome_verificador)
+    nome_verificador = nomes_form[index_verif]
+
+    //var nome_verificador=""
+
+    if (cells[0].classList.contains('ok')) {
+        var msg_erro = "Dentro dos padrões"
+        var link = `https://docs.google.com/forms/d/e/1FAIpQLSe3dQNujFwgZG-rdxdrqoF8i8NHb3BYH8yLZXgW7KF93gp_iA/viewform?usp=pp_url&entry.1247819090=Protocolo+dentro+dos+padr%C3%B5es+NCC&entry.1594760899=${msg_erro}&entry.479460712=${protocolo}&entry.1168750468=${codigo}&entry.150123755=${data_pro}&entry.670394469=${nome_verificador}&entry.1721606117=${nome_op}`
+    } else if (cells[0].classList.contains('erro')) {
+        var msg_erro = ""
+        var link = `https://docs.google.com/forms/d/e/1FAIpQLSe3dQNujFwgZG-rdxdrqoF8i8NHb3BYH8yLZXgW7KF93gp_iA/viewform?usp=pp_url&entry.1594760899=${msg_erro}&entry.479460712=${protocolo}&entry.1168750468=${codigo}&entry.150123755=${data_pro}&entry.670394469=${nome_verificador}&entry.1721606117=${nome_op}`
+    } else {
+        var msg_erro = ""
+        var link = `https://docs.google.com/forms/d/e/1FAIpQLSe3dQNujFwgZG-rdxdrqoF8i8NHb3BYH8yLZXgW7KF93gp_iA/viewform?usp=pp_url&entry.1594760899=${msg_erro}&entry.479460712=${protocolo}&entry.1168750468=${codigo}&entry.150123755=${data_pro}&entry.670394469=${nome_verificador}&entry.1721606117=${nome_op}`
     }
+
+
+    var largura = 1400; // Largura da nova janela em pixels
+    var altura = 400; // Altura da nova janela em pixels    
+
+    var left = (screen.width - largura) / 2;
+    var top = (screen.height - altura) / 2;
+    window.open(link, '_blank', 'width=' + largura + ',height=' + altura + ',left=' + left + ',top=' + top);
+}
 
 
 
@@ -231,30 +231,39 @@ function retornarMaiorValor(num1, num2) {
 function transformarDataFormato(data) {
     // Divide a string da data em dia, mês e ano
     var partes = data.split('/');
-    
+
     // Inverte a ordem para ano, mês, dia e une novamente com "-"
     var novaData = partes[2] + '-' + partes[1] + '-' + partes[0];
-    
+
     return novaData;
-  }
+}
 
 
-  function addLinhas(){
+function addLinhas() {
     var tabela = document.getElementById("linhas")
     var qtd_linhas = contarElementosTR()
-    tabela.innerHTML = tabela.innerHTML + `<tr> <td><input type="text" class="cell" id="cell${qtd_linhas}0"></td> <td><input type="text" class="cell" id="cell${qtd_linhas}1"></td> <td><input type="text" class="cell" id="cell${qtd_linhas}2"></td> <td><input type="text" class="cell" id="cell${qtd_linhas}3" ondblclick="link_protocolo(this)"></td> <td><input type="text" class="cell" id="cell${qtd_linhas}4" ondblclick="link_protocolo(this)"></td> <td><input type="text" class="cell" id="cell${qtd_linhas}5"></td> <td><button class="btnn btn btn-warning" name="dentro_dos_padroes" onclick="dentro_dos_padroes(this)">Dentro dos padrões</button></td> <td><button class="btnn btn btn-warning" name="fora_dos_padroes" onclick="fora_dos_padroes(this)">Fora dos padrões</button></td> <td><button class="btnn btn btn-info" onclick="link_formulario(this)">Formulario</button></td> </tr>`
+    tabela.innerHTML = tabela.innerHTML + `<tr> <td><span class="num_posi"></span></td> <td><input type="text" class="cell" id="cell${qtd_linhas}0"></td> <td><input type="text" class="cell" id="cell${qtd_linhas}1"></td> <td><input type="text" class="cell" id="cell${qtd_linhas}2"></td> <td><input type="text" class="cell" id="cell${qtd_linhas}3" ondblclick="link_protocolo(this)"></td> <td><input type="text" class="cell" id="cell${qtd_linhas}4" ondblclick="link_protocolo(this)"></td> <td><input type="text" class="cell" id="cell${qtd_linhas}5"></td> <td><button class="btnn btn btn-warning" name="dentro_dos_padroes" onclick="dentro_dos_padroes(this)">Dentro dos padrões</button></td> <td><button class="btnn btn btn-warning" name="fora_dos_padroes" onclick="fora_dos_padroes(this)">Fora dos padrões</button></td> <td><button class="btnn btn btn-info" onclick="link_formulario(this)">Formulario</button></td> </tr>`
+    atualizar_posi()
+}
 
-  }
 
 
-
-  function contarElementosTR() {
+function contarElementosTR() {
     var div = document.getElementById('linhas');
     if (div) {
-      var trElements = div.getElementsByTagName('tr');
-      return trElements.length;
+        var trElements = div.getElementsByTagName('tr');
+        return trElements.length;
     } else {
-      //console.log('A div com o ID ' + divId + ' não foi encontrada.');
-      return 0;
+        //console.log('A div com o ID ' + divId + ' não foi encontrada.');
+        return 0;
     }
-  }
+}
+
+function atualizar_posi(){
+    var campos = document.querySelectorAll('[class=num_posi]')
+    cont = 1;
+    campos.forEach(element => {
+        element.innerHTML = cont+" - ";
+        cont++ ;
+    });
+}
