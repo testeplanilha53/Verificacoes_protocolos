@@ -269,4 +269,4 @@ function atualizar_posi(){
 }
 
 //document.getElementsByTagName("body")[0].style.cursor = "url('http://wiki-devel.sugarlabs.org/images/e/e2/Arrow.cur'), auto";
-document.getElementsByTagName("body")[0].style.cursor = "url('https://cursor.style/cursors/2061-dark-cacoa-cursor.svg'), auto";
+document.getElementsByTagName("body")[0].style.cursor = "url('https://cursor.style/cursors/2068-zombie-cursor.svg'), auto";
