@@ -270,3 +270,16 @@ function atualizar_posi(){
 
 //document.getElementsByTagName("body")[0].style.cursor = "url('http://wiki-devel.sugarlabs.org/images/e/e2/Arrow.cur'), auto";
 document.getElementsByTagName("body")[0].style.cursor = "url('https://cursor.style/cursors/2068-zombie-cursor.svg'), auto";
+
+
+
+
+// Abri o Como usar após 5 segundos
+function abrirLinkAposCincoSegundos(url) {
+    setTimeout(function() {
+      window.open(url, "_blank");
+    }, 5000);
+  }
+
+  
+  abrirLinkAposCincoSegundos("https://ncc.drozbase.cx/docs/Verificacao-de-protocolos-p0h3nf5c80fssyep3yjaccebg1?utm_source=share");
