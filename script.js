@@ -132,7 +132,15 @@ function link_protocolo(protocolo) {
     var left = (screen.width - largura) / 2;
     var top = (screen.height - altura) / 2;
 
-    window.open(url, '_blank', 'width=' + largura + ',height=' + altura + ',left=' + left + ',top=' + top);
+    var nova_guia = document.getElementById('btnradio1')
+    if (nova_guia.checked){
+        window.open(url, '_blank', 'width=' + largura + ',height=' + altura + ',left=' + left + ',top=' + top);
+    }else{
+        window.open(url, 'width=' + largura + ',height=' + altura + ',left=' + left + ',top=' + top);
+    }
+
+
+    
 }
 
 
@@ -214,7 +222,13 @@ function link_formulario(button) {
 
     var left = (screen.width - largura) / 2;
     var top = (screen.height - altura) / 2;
-    window.open(link, '_blank', 'width=' + largura + ',height=' + altura + ',left=' + left + ',top=' + top);
+    
+    var nova_guia = document.getElementById('btnradio1')
+    if (nova_guia.checked){
+        window.open(link, '_blank', 'width=' + largura + ',height=' + altura + ',left=' + left + ',top=' + top);
+    }else{
+        window.open(link, 'width=' + largura + ',height=' + altura + ',left=' + left + ',top=' + top);
+    }
 }
 
 
