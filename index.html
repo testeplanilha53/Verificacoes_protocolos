@@ -51,22 +51,11 @@
       <label class="btn btn-outline-danger" for="btnradio2">Abrir em uma nova guia</label>  
     </span>
     --
-    <span class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-        🖱
-      </button>
-      <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-        <li><span class="dropdown-item active" onclick="alterarMouse(1)">Tipo 1</span></li>
-        <li><span class="dropdown-item" onclick="alterarMouse(2)">Tipo 2</span></li>
-        <li><span class="dropdown-item" onclick="alterarMouse(3)">Tipo 3</span></li>        
-      </ul>
-    </span>
-
-    <select name="cars" id="cars">
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="mercedes">Mercedes</option>
-      <option value="audi">Audi</option>
+    <select id="mouse" onchange="alterarMouse()">
+      <option value="1">Tipos de 🖱</option>
+      <option value="1">Tipo 1</option>
+      <option value="2">Tipo 2</option>
+      <option value="3">Tipo 3</option>      
     </select>
 
     <br> <br>
