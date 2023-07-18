@@ -309,4 +309,4 @@ function abrirLinkAposCincoSegundos(url) {
   }
 
   
-  abrirLinkAposCincoSegundos("https://ncc.drozbase.cx/docs/Verificacao-de-protocolos-p0h3nf5c80fssyep3yjaccebg1?utm_source=share");
+  //abrirLinkAposCincoSegundos("https://ncc.drozbase.cx/docs/Verificacao-de-protocolos-p0h3nf5c80fssyep3yjaccebg1?utm_source=share");
