@@ -292,9 +292,7 @@ function alterarMouse(){
         case "2":
             document.getElementsByTagName("body")[0].style.cursor = "url('https://cursor.style/cursors/2068-zombie-cursor.svg'), auto";        
         case "3":
-            document.getElementsByTagName("body")[0].style.cursor = "url('https://cursor.style/cursors/2078-blue-pointer-cursor.svg'), auto";
-        default:
-          
+            document.getElementsByTagName("body")[0].style.cursor = "url('https://cursor.style/cursors/2078-blue-pointer-cursor.svg'), auto";                 
       }          
 }
 
