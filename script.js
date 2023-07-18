@@ -285,22 +285,22 @@ function atualizar_posi(){
 
 function alterarMouse(){
     var tipo = window.document.getElementById("mouse").value
-    console.log(tipo)
+    
+    if (tipo=="1"){
+        document.getElementsByTagName("body")[0].style.cursor = "url('http://wiki-devel.sugarlabs.org/images/e/e2/Arrow.cur'), auto";
+        console.log(tipo)
+    }
 
-    switch (tipo) {
-        case "1":
-            document.getElementsByTagName("body")[0].style.cursor = "url('http://wiki-devel.sugarlabs.org/images/e/e2/Arrow.cur'), auto";
-            console.log(tipo)
+    if (tipo=="2"){
+        document.getElementsByTagName("body")[0].style.cursor = "url('https://cursor.style/cursors/2068-zombie-cursor.svg'), auto"; 
+        console.log(tipo)
+    }
 
-        case "2":
-            document.getElementsByTagName("body")[0].style.cursor = "url('https://cursor.style/cursors/2068-zombie-cursor.svg'), auto";        
-            console.log(tipo)
-
-        case "3":
-            document.getElementsByTagName("body")[0].style.cursor = "url('https://cursor.style/cursors/2078-blue-pointer-cursor.svg'), auto";                 
-            console.log(tipo)
-
-      }          
+    if (tipo=="3"){
+        document.getElementsByTagName("body")[0].style.cursor = "url('https://cursor.style/cursors/2078-blue-pointer-cursor.svg'), auto";                 
+        console.log(tipo)
+    }
+         
 }
 
 
