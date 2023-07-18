@@ -283,14 +283,15 @@ function atualizar_posi(){
 }
 
 
-function alterarMouse(tipo){
+function alterarMouse(){
+    var tipo = window.document.getElementById("mouse").value
 
     switch (tipo) {
-        case 1:
+        case "1":
             document.getElementsByTagName("body")[0].style.cursor = "url('http://wiki-devel.sugarlabs.org/images/e/e2/Arrow.cur'), auto";
-        case 2:
+        case "2":
             document.getElementsByTagName("body")[0].style.cursor = "url('https://cursor.style/cursors/2068-zombie-cursor.svg'), auto";        
-        case 3:
+        case "3":
             document.getElementsByTagName("body")[0].style.cursor = "url('https://cursor.style/cursors/2078-blue-pointer-cursor.svg'), auto";
         default:
           
