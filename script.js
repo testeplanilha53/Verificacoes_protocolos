@@ -300,6 +300,11 @@ function alterarMouse(){
         document.getElementsByTagName("body")[0].style.cursor = "url('https://cursor.style/cursors/2078-blue-pointer-cursor.svg'), auto";                 
         console.log(tipo)
     }
+
+    if (tipo=="4"){
+        document.getElementsByTagName("body")[0].style.cursor = "url('https://cursor.style/cursors/1848-mouse-and-owl-cursor.svg'), auto";                 
+        console.log(tipo)
+    }
          
 }
 
