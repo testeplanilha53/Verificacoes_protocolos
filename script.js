@@ -1,3 +1,28 @@
+  /// ALTERANDO O TEMA
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const themeToggle = document.getElementById("theme-toggle");
+    const themeLink = document.getElementById("theme-link");
+
+    // Verifique qual tema está atualmente definido (por padrão, light-theme).
+    let currentTheme = "light";
+
+    // Função para alternar entre os temas.
+    function toggleTheme() {
+        if (currentTheme === "light") {
+            currentTheme = "dark";
+            themeLink.href = "dark-theme.css";
+        } else {
+            currentTheme = "light";
+            themeLink.href = "light-theme.css";
+        }
+    }
+
+    // Adicione um ouvinte de evento de clique ao botão de alternância de tema.
+    themeToggle.addEventListener("click", toggleTheme);
+
+
+
 document.getElementById('transferButton').addEventListener('click', function () {
     // Verificar se a área de transferência é suportada pelo navegador
     if (!navigator.clipboard) {
@@ -314,28 +339,6 @@ function alterarMouse(){
 }
 
 
-  /// ALTERANDO O TEMA
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const themeToggle = document.getElementById("theme-toggle");
-    const themeLink = document.getElementById("theme-link");
-
-    // Verifique qual tema está atualmente definido (por padrão, light-theme).
-    let currentTheme = "light";
-
-    // Função para alternar entre os temas.
-    function toggleTheme() {
-        if (currentTheme === "light") {
-            currentTheme = "dark";
-            themeLink.href = "dark-theme.css";
-        } else {
-            currentTheme = "light";
-            themeLink.href = "light-theme.css";
-        }
-    }
-
-    // Adicione um ouvinte de evento de clique ao botão de alternância de tema.
-    themeToggle.addEventListener("click", toggleTheme);
 
 
 
@@ -348,9 +351,3 @@ function abrirLinkAposCincoSegundos(url) {
 
   
   //abrirLinkAposCincoSegundos("https://ncc.drozbase.cx/docs/Verificacao-de-protocolos-p0h3nf5c80fssyep3yjaccebg1?utm_source=share");
-
-
-
-
-
-  
