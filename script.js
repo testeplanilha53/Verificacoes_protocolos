@@ -1,8 +1,3 @@
-    // Adicione um ouvinte de evento de clique ao botão de alternância de tema.
-    themeToggle.addEventListener("click", toggleTheme);
-
-
-
 document.getElementById('transferButton').addEventListener('click', function () {
     // Verificar se a área de transferência é suportada pelo navegador
     if (!navigator.clipboard) {
