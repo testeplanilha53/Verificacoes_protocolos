@@ -314,22 +314,6 @@ function alterarMouse(){
 }
 
 
-
-
-
-// Abri o Como usar após 5 segundos
-function abrirLinkAposCincoSegundos(url) {
-    setTimeout(function() {
-      window.open(url, "_blank");
-    }, 5000);
-  }
-
-  
-  //abrirLinkAposCincoSegundos("https://ncc.drozbase.cx/docs/Verificacao-de-protocolos-p0h3nf5c80fssyep3yjaccebg1?utm_source=share");
-
-
-
-
   /// ALTERANDO O TEMA
 
   document.addEventListener("DOMContentLoaded", function () {
@@ -352,4 +336,21 @@ function abrirLinkAposCincoSegundos(url) {
 
     // Adicione um ouvinte de evento de clique ao botão de alternância de tema.
     themeToggle.addEventListener("click", toggleTheme);
-});
+
+
+
+// Abri o Como usar após 5 segundos
+function abrirLinkAposCincoSegundos(url) {
+    setTimeout(function() {
+      window.open(url, "_blank");
+    }, 5000);
+  }
+
+  
+  //abrirLinkAposCincoSegundos("https://ncc.drozbase.cx/docs/Verificacao-de-protocolos-p0h3nf5c80fssyep3yjaccebg1?utm_source=share");
+
+
+
+
+
+  
