@@ -17,7 +17,13 @@
   .atalhos{
     margin: 0 auto;
     padding: auto;
-    width: 200%;
+    width: 200%; 
+  }
+
+  #atalhos{
+    display: grid;
+    justify-items: end;
+    justify-content: start;
   }
 
   table,div {
@@ -35,7 +41,7 @@
   }
 
   .btnn {
-    width: 220px;
+    width: 180px;
 
   }
 
