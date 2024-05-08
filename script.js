@@ -187,33 +187,41 @@ function link_formulario(button) {
     console.log(data_pro)
 
     var nome_op = cells[5].value
-    var index_nome = nomes.indexOf(nome_op)
-    nome_op = nomes_form[index_nome]
+    // var index_nome = nomes.indexOf(nome_op)
+    // nome_op = nomes_form[index_nome]
     console.log(nome_op)
 
     var codigo = cells[2].value
-    var index_cod = protocolos.indexOf(codigo)
-    codigo = protocolos_form[index_cod]
+    codigo = codigo.replace(" ", "+");
+
+
+    // var index_cod = protocolos.indexOf(codigo)
+    // codigo = protocolos_form[index_cod]
     console.log(codigo)
 
-    var protocolo = retornarMaiorValor(cells[3].value, cells[4].value)
+    // var protocolo = retornarMaiorValor(cells[3].value, cells[4].value)
+    var protocolo = cells[3].value
     console.log(protocolo)
 
     var nome_verificador = document.getElementById("Verificador").value
+    console.log(nome_verificador)
+    /*
     var index_verif = usuarios.indexOf(nome_verificador)
     nome_verificador = nomes_form[index_verif]
+    */
 
     //var nome_verificador=""
 
     if (cells[0].classList.contains('ok')) {
         var msg_erro = "Dentro dos padrões"
-        var link = `https://docs.google.com/forms/d/e/1FAIpQLSe3dQNujFwgZG-rdxdrqoF8i8NHb3BYH8yLZXgW7KF93gp_iA/viewform?usp=pp_url&entry.1247819090=Protocolo+dentro+dos+padr%C3%B5es+NCC&entry.1594760899=${msg_erro}&entry.479460712=${protocolo}&entry.1168750468=${codigo}&entry.150123755=${data_pro}&entry.670394469=${nome_verificador}&entry.1721606117=${nome_op}`
+        // var link = `https://docs.google.com/forms/d/e/1FAIpQLSe3dQNujFwgZG-rdxdrqoF8i8NHb3BYH8yLZXgW7KF93gp_iA/viewform?usp=pp_url&entry.1247819090=Protocolo+dentro+dos+padr%C3%B5es+NCC&entry.1594760899=${msg_erro}&entry.479460712=${protocolo}&entry.1168750468=${codigo}&entry.150123755=${data_pro}&entry.670394469=${nome_verificador}&entry.1721606117=${nome_op}`
+        var link = `https://docs.google.com/forms/d/e/1FAIpQLSeP8o1eHy_sQ9MWjEODxWbDFDLr1CT1s4k8DMTMb_Wdqn3Amw/viewform?usp=pp_url&entry.735788671=Protocolo+dentro+dos+padr%C3%B5es+NCC&entry.1236168930=${msg_erro}&entry.2105843070=${protocolo}&entry.1677983886=${codigo}&entry.1244179175=${data_pro}&entry.1948729703=${nome_verificador}&entry.695741277=${nome_op}`
     } else if (cells[0].classList.contains('erro')) {
         var msg_erro = ""
-        var link = `https://docs.google.com/forms/d/e/1FAIpQLSe3dQNujFwgZG-rdxdrqoF8i8NHb3BYH8yLZXgW7KF93gp_iA/viewform?usp=pp_url&entry.1594760899=${msg_erro}&entry.479460712=${protocolo}&entry.1168750468=${codigo}&entry.150123755=${data_pro}&entry.670394469=${nome_verificador}&entry.1721606117=${nome_op}`
+        var link = `https://docs.google.com/forms/d/e/1FAIpQLSeP8o1eHy_sQ9MWjEODxWbDFDLr1CT1s4k8DMTMb_Wdqn3Amw/viewform?usp=pp_url&entry.735788671=${""}&entry.1236168930=${msg_erro}&entry.2105843070=${protocolo}&entry.1677983886=${codigo}&entry.1244179175=${data_pro}&entry.1948729703=${nome_verificador}&entry.695741277=${nome_op}`
     } else {
         var msg_erro = ""
-        var link = `https://docs.google.com/forms/d/e/1FAIpQLSe3dQNujFwgZG-rdxdrqoF8i8NHb3BYH8yLZXgW7KF93gp_iA/viewform?usp=pp_url&entry.1594760899=${msg_erro}&entry.479460712=${protocolo}&entry.1168750468=${codigo}&entry.150123755=${data_pro}&entry.670394469=${nome_verificador}&entry.1721606117=${nome_op}`
+        var link = `https://docs.google.com/forms/d/e/1FAIpQLSeP8o1eHy_sQ9MWjEODxWbDFDLr1CT1s4k8DMTMb_Wdqn3Amw/viewform?usp=pp_url&entry.735788671=${""}&entry.1236168930=${msg_erro}&entry.2105843070=${protocolo}&entry.1677983886=${codigo}&entry.1244179175=${data_pro}&entry.1948729703=${nome_verificador}&entry.695741277=${nome_op}`
     }
 
 
