@@ -9,6 +9,23 @@
     /* Ajuste o valor conforme necessário */
   }
 
+.white{
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+
+.black{
+  background-color: rgb(53, 54, 63);
+  color: white;
+}
+
+.black-input{
+  background-color: rgb(77, 78, 88);
+  color: white;
+}
+
+
+
   #verif_protocolos {
     margin-left: 0;
     margin-right: auto;    

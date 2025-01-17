@@ -334,3 +334,14 @@ function abrirLinkAposCincoSegundos(url) {
 
   
   //abrirLinkAposCincoSegundos("https://ncc.drozbase.cx/docs/Verificacao-de-protocolos-p0h3nf5c80fssyep3yjaccebg1?utm_source=share");
+
+
+  document.getElementById('alterarTema').addEventListener('click', function(){
+    let corpo = document.getElementById('corpo')    
+    corpo.classList.toggle("black");
+
+    document.querySelectorAll('input').forEach(function(element){
+        element.classList.toggle("black-input")
+    })
+
+  })
