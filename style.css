@@ -92,3 +92,11 @@
   .num_posi{
     text-align: center;    
   }
+
+  
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
