@@ -16,11 +16,13 @@
 .white{
   background-color: rgb(255, 255, 255);
   color: black;
+  transition-duration: 1.5s;
 }
 
 .black{
   background-color: rgb(53, 54, 63);
   color: white;
+  transition-duration: 1.5s;
 }
 
 .black-input{
