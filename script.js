@@ -215,14 +215,27 @@ function link_formulario(button) {
     if (cells[0].classList.contains('ok')) {
         var msg_erro = "Dentro dos padrões"
         // var link = `https://docs.google.com/forms/d/e/1FAIpQLSe3dQNujFwgZG-rdxdrqoF8i8NHb3BYH8yLZXgW7KF93gp_iA/viewform?usp=pp_url&entry.1247819090=Protocolo+dentro+dos+padr%C3%B5es+NCC&entry.1594760899=${msg_erro}&entry.479460712=${protocolo}&entry.1168750468=${codigo}&entry.150123755=${data_pro}&entry.670394469=${nome_verificador}&entry.1721606117=${nome_op}`
-        var link = `https://docs.google.com/forms/d/e/1FAIpQLSeP8o1eHy_sQ9MWjEODxWbDFDLr1CT1s4k8DMTMb_Wdqn3Amw/viewform?usp=pp_url&entry.735788671=Protocolo+dentro+dos+padr%C3%B5es+NCC&entry.1236168930=${msg_erro}&entry.2105843070=${protocolo}&entry.1677983886=${codigo}&entry.1244179175=${data_pro}&entry.1948729703=${nome_verificador}&entry.695741277=${nome_op}`
+        var link = `https://docs.google.com/forms/d/e/1FAIpQLScwH8karXYilRJrfhzUZboToqk3a2Dpu4IUhm-dbF_SI52EXQ/viewform?usp=pp_url&entry.735788671=Protocolo+dentro+dos+padr%C3%B5es+NCC&entry.1236168930=${msg_erro}&entry.2105843070=${protocolo}&entry.1677983886=${codigo}&entry.1244179175=${data_pro}&entry.1948729703=${nome_verificador}&entry.695741277=${nome_op}`
     } else if (cells[0].classList.contains('erro')) {
         var msg_erro = ""
-        var link = `https://docs.google.com/forms/d/e/1FAIpQLSeP8o1eHy_sQ9MWjEODxWbDFDLr1CT1s4k8DMTMb_Wdqn3Amw/viewform?usp=pp_url&entry.735788671=${""}&entry.1236168930=${msg_erro}&entry.2105843070=${protocolo}&entry.1677983886=${codigo}&entry.1244179175=${data_pro}&entry.1948729703=${nome_verificador}&entry.695741277=${nome_op}`
+        var link = `https://docs.google.com/forms/d/e/1FAIpQLScwH8karXYilRJrfhzUZboToqk3a2Dpu4IUhm-dbF_SI52EXQ/viewform?usp=pp_url&entry.735788671=${""}&entry.1236168930=${msg_erro}&entry.2105843070=${protocolo}&entry.1677983886=${codigo}&entry.1244179175=${data_pro}&entry.1948729703=${nome_verificador}&entry.695741277=${nome_op}`
     } else {
         var msg_erro = ""
-        var link = `https://docs.google.com/forms/d/e/1FAIpQLSeP8o1eHy_sQ9MWjEODxWbDFDLr1CT1s4k8DMTMb_Wdqn3Amw/viewform?usp=pp_url&entry.735788671=${""}&entry.1236168930=${msg_erro}&entry.2105843070=${protocolo}&entry.1677983886=${codigo}&entry.1244179175=${data_pro}&entry.1948729703=${nome_verificador}&entry.695741277=${nome_op}`
+        var link = `https://docs.google.com/forms/d/e/1FAIpQLScwH8karXYilRJrfhzUZboToqk3a2Dpu4IUhm-dbF_SI52EXQ/viewform?usp=pp_url&entry.735788671=${""}&entry.1236168930=${msg_erro}&entry.2105843070=${protocolo}&entry.1677983886=${codigo}&entry.1244179175=${data_pro}&entry.1948729703=${nome_verificador}&entry.695741277=${nome_op}`
     }
+
+    // if (cells[0].classList.contains('ok')) {
+    //     var msg_erro = "Dentro dos padrões"
+    //     // var link = `https://docs.google.com/forms/d/e/1FAIpQLSe3dQNujFwgZG-rdxdrqoF8i8NHb3BYH8yLZXgW7KF93gp_iA/viewform?usp=pp_url&entry.1247819090=Protocolo+dentro+dos+padr%C3%B5es+NCC&entry.1594760899=${msg_erro}&entry.479460712=${protocolo}&entry.1168750468=${codigo}&entry.150123755=${data_pro}&entry.670394469=${nome_verificador}&entry.1721606117=${nome_op}`
+    //     var link = `https://docs.google.com/forms/d/e/1FAIpQLSeP8o1eHy_sQ9MWjEODxWbDFDLr1CT1s4k8DMTMb_Wdqn3Amw/viewform?usp=pp_url&entry.735788671=Protocolo+dentro+dos+padr%C3%B5es+NCC&entry.1236168930=${msg_erro}&entry.2105843070=${protocolo}&entry.1677983886=${codigo}&entry.1244179175=${data_pro}&entry.1948729703=${nome_verificador}&entry.695741277=${nome_op}`
+    // } else if (cells[0].classList.contains('erro')) {
+    //     var msg_erro = ""
+    //     var link = `https://docs.google.com/forms/d/e/1FAIpQLSeP8o1eHy_sQ9MWjEODxWbDFDLr1CT1s4k8DMTMb_Wdqn3Amw/viewform?usp=pp_url&entry.735788671=${""}&entry.1236168930=${msg_erro}&entry.2105843070=${protocolo}&entry.1677983886=${codigo}&entry.1244179175=${data_pro}&entry.1948729703=${nome_verificador}&entry.695741277=${nome_op}`
+    // } else {
+    //     var msg_erro = ""
+    //     var link = `https://docs.google.com/forms/d/e/1FAIpQLSeP8o1eHy_sQ9MWjEODxWbDFDLr1CT1s4k8DMTMb_Wdqn3Amw/viewform?usp=pp_url&entry.735788671=${""}&entry.1236168930=${msg_erro}&entry.2105843070=${protocolo}&entry.1677983886=${codigo}&entry.1244179175=${data_pro}&entry.1948729703=${nome_verificador}&entry.695741277=${nome_op}`
+    // }
+
 
 
     var largura = 1400; // Largura da nova janela em pixels
