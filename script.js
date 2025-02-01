@@ -279,6 +279,17 @@ function addLinhas() {
     var qtd_linhas = contarElementosTR()
     tabela.innerHTML = tabela.innerHTML + `<tr> <td><span class="num_posi"></span></td> <td><input type="text" class="cell" id="cell${qtd_linhas}0"></td> <td><input type="text" class="cell" id="cell${qtd_linhas}1"></td> <td><input type="text" class="cell" id="cell${qtd_linhas}2"></td> <td><input type="text" class="cell" id="cell${qtd_linhas}3" ondblclick="link_protocolo(this)"></td> <td><input type="text" class="cell" id="cell${qtd_linhas}4"></td> <td><input type="text" class="cell" id="cell${qtd_linhas}5"></td> <td><button class="btnn btn btn-warning" name="dentro_dos_padroes" onclick="dentro_dos_padroes(this)">Dentro dos padrões</button></td> <td><button class="btnn btn btn-warning" name="fora_dos_padroes" onclick="fora_dos_padroes(this)">Fora dos padrões</button></td> <td><button class="btnn btn btn-info" onclick="link_formulario(this)">Formulario</button></td> </tr>`
     atualizar_posi()
+
+
+    let corpo = document.getElementById('corpo')        
+
+    if (corpo.classList.contains('black')){
+        document.querySelectorAll('input').forEach(function(element){
+            element.classList.add("black-input")
+        })
+    }
+
+    
 }
 
 
@@ -356,5 +367,7 @@ function abrirLinkAposCincoSegundos(url) {
     document.querySelectorAll('input').forEach(function(element){
         element.classList.toggle("black-input")
     })
+
+    document.getElementsByTagName('footer')[0].classList.toggle("black")
 
   })

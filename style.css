@@ -9,6 +9,10 @@
     /* Ajuste o valor conforme necessário */
   }
 
+  .btnCima{
+    margin: 0 0.25rem 0 0;
+  }
+
 .white{
   background-color: rgb(255, 255, 255);
   color: black;
